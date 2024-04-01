@@ -90,8 +90,19 @@ export const AnswerToUser = () => {
     "Very doubtful",
   ];
 
-  const randomIndex = Math.floor(Math.random() * answer.length);
-  const randomAnswer = answer[randomIndex];
+  const getRandomIndex = () => {
+    return Math.floor(Math.random() * answer.length);
+  };
 
-  alert(randomAnswer);
+  const getRandomAnswer = () => {
+    const randomIndex = getRandomIndex();
+    return answer[randomIndex];
+  };
+
+  const displayAnswer = () => {
+    const randomAnswer = getRandomAnswer();
+    alert(randomAnswer);
+  };
+
+  displayAnswer();
 };
